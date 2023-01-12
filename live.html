@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="簡単にあなたの画面を共有しよう">
+    <title>ScreenLive | 配信する</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+        * {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header class="grid h-24 place-items-center">
+        <h1 class="block text-3xl">ScreenLive</h1>
+        <div class="grid gap-8 grid-cols-3 place-items-center">
+            <p><a href="live.html">配信をする</a></p>
+            <p><a href="index.html">Top</a></p>
+            <p><a href="watch.html">配信を見る</a></p>
+        </div>
+    </header>
+    <main class="">
+        <div class="m-2">
+            <h2 class="inline text-2xl">配信をする</h2>
+            <p class="mt-4">共有Link</p>
+            <p>
+                <input readonly class="border-double border-4 outline-none" placeholder="ShareLink" type="text"><button class="bg-gray-700 hover:bg-gray-600 text-white rounded px-4 py-2">Copy</button>
+            </p>
+            <p class="mt-4">部屋ID</p>
+            <p>
+                <input readonly class="border-double border-4 outline-none" placeholder="RoomID" type="text"><button class="bg-gray-700 hover:bg-gray-600 text-white rounded px-4 py-2">Copy</button>
+            </p>
+            <hr class="my-2">
+            <p>
+                <button class="bg-green-700 hover:bg-green-600 text-white rounded px-4 py-2">共有リンクの更新</button>※前のリンクは使用できなくなります
+            </p>
+        </div>
+    </main>
+    <script src="live.js"></script>
+</body>
+</html>
