@@ -24,23 +24,32 @@
             <p><a href="watch.html">配信を見る</a></p>
         </div>
     </header>
-    <main class="">
-        <div class="m-2">
-            <h2 class="inline text-2xl">配信をする</h2>
+    <main class="m-2">
+        <div>
             <p class="mt-4">共有Link</p>
             <p>
-                <input readonly class="border-double border-4 outline-none" placeholder="ShareLink" type="text"><button class="bg-gray-700 hover:bg-gray-600 text-white rounded px-4 py-2">Copy</button>
+                <input id="shareLink" readonly class="border-double border-4 outline-none" placeholder="まだ配信を開始していません" type="text"><button class="bg-gray-700 hover:bg-gray-600 text-white rounded px-4 py-2">Copy</button>
             </p>
             <p class="mt-4">部屋ID</p>
             <p>
-                <input readonly class="border-double border-4 outline-none" placeholder="RoomID" type="text"><button class="bg-gray-700 hover:bg-gray-600 text-white rounded px-4 py-2">Copy</button>
-            </p>
-            <hr class="my-2">
-            <p>
-                <button class="bg-green-700 hover:bg-green-600 text-white rounded px-4 py-2">共有リンクの更新</button>※前のリンクは使用できなくなります
+                <input id="roomId" readonly class="border-double border-4 outline-none" placeholder="まだ配信を開始していません" type="text"><button class="bg-gray-700 hover:bg-gray-600 text-white rounded px-4 py-2">Copy</button>
             </p>
         </div>
+        <hr class="my-2">
+        <div>
+            - <button id="start_stream_btn" onclick="startStream();" class="bg-blue-800 hover:bg-blue-700 text-white rounded px-4 py-2">配信を開始</button>
+            <button id="change_stream_btn" onclick="changeStream();" class="hidden bg-green-700 hover:bg-green-600 text-white rounded px-4 py-2">配信するウィンドウを変更</button>
+            <button id="stop_stream_btn" onclick="stopStream();" class="hidden bg-red-700 hover:bg-red-600 text-white rounded px-4 py-2">配信を停止</button>
+            <p id="stream_status">配信していません</p>
+            <video id="local_stream" src=""></video>
+        </div>
     </main>
+    <script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
+    <script src="https://cdn.webrtc.ecl.ntt.com/skyway-4.4.4.js"></script>
     <script src="live.js"></script>
+    <script src="https://vjs.zencdn.net/7.20.1/video.min.js"></script>
 </body>
 </html>
