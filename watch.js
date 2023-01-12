@@ -4,6 +4,11 @@ const roomId = params.get("id");
 
 const remoteVideo = document.getElementById("remote-stream");
 
+const peer = (window.peer = new Peer({
+  key: "ff4aac66-dfa3-41b1-8e9b-80fff81cd0c4",
+  debug: 3,
+}));
+
 const room = peer.joinRoom(roomId, {
   mode: getRoomModeByHash(),
 });
