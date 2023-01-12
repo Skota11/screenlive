@@ -10,7 +10,7 @@ const peer = (window.peer = new Peer({
 }));
 
 const room = peer.joinRoom(roomId, {
-  mode: getRoomModeByHash(),
+  mode: "mesh",
 });
 room.on("stream", async (stream) => {
   const newVideo = document.createElement("video");
