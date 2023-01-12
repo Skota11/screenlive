@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="description" content="簡単にあなたの画面を共有しよう">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="簡単にあなたの画面を共有しよう" />
     <title>ScreenLive | 配信する</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
-        * {
-            font-family: 'Noto Sans JP', sans-serif;
-        }
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+      * {
+        font-family: "Noto Sans JP", sans-serif;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header class="grid h-24 place-items-center">
-        <h1 class="block text-3xl">ScreenLive</h1>
-        <div class="grid gap-8 grid-cols-3 place-items-center">
-            <p><a href="live.html">配信をする</a></p>
-            <p><a href="index.html">Top</a></p>
-            <p><a href="watch.html">配信を見る</a></p>
-        </div>
+      <h1 class="block text-3xl">ScreenLive</h1>
+      <div class="grid gap-8 grid-cols-3 place-items-center">
+        <p><a href="live.html">配信をする</a></p>
+        <p><a href="index.html">Top</a></p>
+        <p><a href="watch.html">配信を見る</a></p>
+      </div>
     </header>
     <main class="m-2">
-        <button onclick="start();">視聴する</button>
-        <div>
-            <div id="remote-stream"></div>
-        </div>
+      <button onclick="start();">視聴する</button>
+      <div>
+        <div id="remote-stream"></div>
+      </div>
     </main>
     <script
-  src="https://code.jquery.com/jquery-3.6.3.min.js"
-  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-  crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.webrtc.ecl.ntt.com/skyway-4.4.4.js"></script>
     <script src="watch.js"></script>
     <script src="https://vjs.zencdn.net/7.20.1/video.min.js"></script>
-</body>
+  </body>
 </html>
