@@ -1,18 +1,20 @@
-(async function main() {
-  let url = new URL(window.location.href);
-  let params = url.searchParams;
-  const roomId = params.get("id");
+const Peer = window.Peer;
 
-  const remoteVideo = document.getElementById("remote-stream");
+let url = new URL(window.location.href);
+let params = url.searchParams;
+const roomId = params.get("id");
 
-  const peer = await (window.peer = new Peer({
-    key: "ff4aac66-dfa3-41b1-8e9b-80fff81cd0c4",
-    debug: 3,
-  }));
+const remoteVideo = document.getElementById("remote-stream");
 
+const peer = (window.peer = new Peer({
+  key: "ff4aac66-dfa3-41b1-8e9b-80fff81cd0c4",
+  debug: 3,
+}));
+function start() {
   const room = peer.joinRoom(roomId, {
     mode: "mesh",
   });
+
   room.on("stream", async (stream) => {
     const newVideo = document.createElement("video");
     newVideo.srcObject = stream;
@@ -33,4 +35,4 @@
       liveui: true,
     }).play();
   });
-})();
+}
