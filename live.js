@@ -48,3 +48,12 @@ function stopStream() {
   document.getElementById("stream_status").textContent = "配信を停止";
 }
 //event
+//Button
+document.getElementById("link_copy").addEventListener("click", () => {
+  document.getElementById("shareLink").select();
+  document.execCommand("copy");
+});
+document.getElementById("room_copy").addEventListener("click", () => {
+  document.getElementById("roomId").select();
+  document.execCommand("copy");
+});
